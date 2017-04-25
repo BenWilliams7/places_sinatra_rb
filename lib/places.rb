@@ -9,4 +9,7 @@ class Places
   define_singleton_method(:all) do
     @@all_places
   end
+  define_method(:save) do
+    @@all_places.push(self)
+  end
 end

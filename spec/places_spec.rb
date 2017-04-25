@@ -13,4 +13,11 @@ describe(Places) do
       expect(Places.all()).to(eq([]))
     end
   end
+  describe("#save") do
+  it("adds a location to the array of saved locations") do
+    test_place = Places.new("Washington")
+    test_place.save()
+    expect(Places.all()).to(eq([test_place]))
+  end
+end
 end
